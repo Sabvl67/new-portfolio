@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { AboutComponent } from "./about/about.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { ProjectComponent } from "./project/project.component";
+
 @Component({
   selector: 'app-root',
   standalone: true,
