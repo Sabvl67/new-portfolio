@@ -1,0 +1,7 @@
+<ul class = "nav-bar flex flex-row justify-content-center">
+    @for (item of navLink; track item) {
+        <li class = "nav-link px-8">
+            <a class="nav-item" (click)="scrollTo(item.toLowerCase())"> {{item}} </a>
+        </li>
+    }
+</ul>
