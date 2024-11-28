@@ -19,20 +19,24 @@ export class AboutComponent implements OnInit{
     ngOnInit() {
       this.items = [
         {
-          label: 'Data Science',
-          icon: '/p1.png',
+          label: 'Spotify',
+          icon: 'spotify.svg'
         },
         {
-          label: 'FrontEnd',
-          icon: '/p2.png',
+          label: 'Github',
+          icon: '/github.svg',
         },
         {
-          label: 'Backend',
-          icon: '/p3.png',
+          label: 'Linkedin',
+          icon: '/linkedin.svg',
         },
         {
-          label: 'blah blah',
-          icon: '/cat.png',
+          label: 'Gmail',
+          icon: '/gmail.svg',
+        },
+        {
+          label: 'Threads',
+          icon: '/threads.svg',
         },
       ];
     }

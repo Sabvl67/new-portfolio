@@ -1,1 +1,37 @@
-<p>contact works!</p>
+<div class="grid justify-content-center flex-wrap">
+  <div class="formgrid grid">
+    <div class="field col-12 md:col-6">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+      />
+    </div>
+
+    <div class="field col-12 md:col-6">
+      <label for="city">City</label>
+      <input
+        id="city"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+      />
+    </div>
+
+    <div class="field col-12">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        type="text"
+        rows="4"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+      ></textarea>
+    </div>
+
+    <div class="card flex flex-wrap gap-3 justify-content-center">
+        <p-button label="Send" [rounded]="true" severity="secondary" />
+    </div>
+
+  </div>
+</div>
+
