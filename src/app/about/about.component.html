@@ -16,3 +16,24 @@
           </div>          
 
     </div>
+
+
+    <div class="flex flex-wrap align-items-center justify-content-center" style="margin-top: 100px;">
+        <img src="/intro-group.svg" alt="Introduction graphic" class="w-min h-min" style="transform: scale(0.80);">
+        <div style="position: absolute; top: 70%; left: 53%; transform: translate(-50%, -50%); text-align: center; z-index:10; width: 300px; height: 300px;">
+            <span class = "font-bold">About me</span> 
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo excepturi. Accusamus in cupiditate, odit pariatur nihil sit facilis praesentium molestiae dignissimos repellendus at. 
+            Dolorem nam ex labore soluta animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo excepturi. Accusamus in cupiditate, odit pariatur nihil sit facilis praesentium molestiae dignissimos repellendus at. Dolorem nam ex labore soluta animi.
+        </div>
+    </div>
+
+<div id ="projects" class = "card flex justify-content-center">
+    <div class="dock-window ">
+        <p-dock [model]="items" >
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.icon" [alt]="item.label" width="100%" />
+            </ng-template>
+        </p-dock>
+    </div>
+</div>

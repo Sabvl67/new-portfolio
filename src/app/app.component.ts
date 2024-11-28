@@ -10,7 +10,7 @@ import { ProjectComponent } from "./project/project.component";
   standalone: true,
   imports: [RouterOutlet, ButtonModule, AboutComponent, NavBarComponent, ProjectComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'cindy-portfolio';

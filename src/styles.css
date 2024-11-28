@@ -6,6 +6,10 @@
 
 body {
     background-image: url("/bg.png");
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     /* background-color: #0f103f; */
     color: white;
 }

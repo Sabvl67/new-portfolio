@@ -6,7 +6,7 @@ import { ViewportScroller } from '@angular/common';
   standalone: true,
   imports: [],
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+  styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
   constructor ( private ViewportScroller: ViewportScroller) {}
