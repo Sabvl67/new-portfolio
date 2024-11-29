@@ -35,8 +35,8 @@ export class AboutComponent implements OnInit{
           icon: '/gmail.svg',
         },
         {
-          label: 'Threads',
-          icon: '/threads.svg',
+          label: 'Discord',
+          icon: '/discord.svg',
         },
       ];
     }

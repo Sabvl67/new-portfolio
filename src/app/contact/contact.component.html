@@ -1,4 +1,8 @@
-<div class="grid justify-content-center flex-wrap">
+<div class="flex justify-content-center">
+  <p-image src="/cat.svg" width="150" class="flex col-5" />
+</div>
+
+<div class="grid justify-content-center">
   <div class="formgrid grid">
     <div class="field col-12 md:col-6">
       <label for="name">Name</label>
@@ -8,16 +12,14 @@
         class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
       />
     </div>
-
     <div class="field col-12 md:col-6">
-      <label for="city">City</label>
+      <label for="email">Email</label>
       <input
-        id="city"
+        id="email"
         type="text"
         class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
       />
     </div>
-
     <div class="field col-12">
       <label for="message">Message</label>
       <textarea
@@ -27,11 +29,5 @@
         class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
       ></textarea>
     </div>
-
-    <div class="card flex flex-wrap gap-3 justify-content-center">
-        <p-button label="Send" [rounded]="true" severity="secondary" />
-    </div>
-
   </div>
 </div>
-
