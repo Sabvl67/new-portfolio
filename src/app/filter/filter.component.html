@@ -1,0 +1,22 @@
+<div class="filter-container">
+    <h3>Filter:</h3>
+    <select [(ngModel)]="selectedCategory" (change)="filterCards()">
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+  
+  <div class="card-container">
+    <div
+      class="card"
+      *ngFor="let card of filteredCards"
+      [attr.data-category]="card.category"
+    >
+      <img [src]="card.image" alt="Card Image" />
+      <div class="info">
+        <h1>{{ card.title }}</h1>
+        <p>{{ card.description }}</p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </div>
+  
