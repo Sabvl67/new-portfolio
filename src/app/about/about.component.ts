@@ -15,6 +15,7 @@ export class AboutComponent implements OnInit{
     items: MenuItem[] | undefined;
   
     label: string | undefined;
+    position: string =  "right"
   
     ngOnInit() {
       this.items = [

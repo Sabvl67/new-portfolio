@@ -1,6 +1,6 @@
 <!-- Brief introduction, tagline, or welcome message. -->
 
-<div id ="about" class = "flex-row">
+<div id ="about">
     <div class = "flex justify-content-end grid col-6 pt-8">
         <h1 class ="text-left">
             <span class="block"> Software Developer </span>
@@ -18,19 +18,19 @@
     </div>
 
 
-    <div class="flex justify-content-center" style="margin-top: 100px;">
+    <div class="relative flex justify-content-center">
         <img src="/intro-group.svg" alt="Introduction graphic" class="w-min h-min" style="transform: scale(0.80);">
-        <!-- <div style="position: absolute; top: 68%; left: 53.5%; transform: translate(-50%, -50%); text-align: center; z-index:10; width: 280px; height: 300px;">
+        <div style="position: absolute; top: 40%; left: 53.5%; transform: translate(-50%, -50%); text-align: center; width: 90%; max-width: 280px; height: auto; padding: 1em">
             <span class = "font-bold">About me</span> 
             <br><br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo excepturi. Accusamus in cupiditate, odit pariatur nihil sit facilis praesentium molestiae dignissimos repellendus at. 
             Dolorem nam ex labore soluta animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo excepturi. Accusamus in cupiditate, odit pariatur nihil sit facilis praesentium molestiae dignissimos repellendus at. Dolorem nam ex labore soluta animi.
-        </div> -->
+        </div>
     </div>
 
-<div id ="projects" class = "card flex justify-content-center">
-    <div class="dock-window ">
-        <p-dock [model]="items" >
+    <div id="projects" class="fixed z-5 flex justify-content-center" style="top: 50%; right: 0%; width: 100%; height: auto;">
+        <div class=" dock-window ">
+        <p-dock [model]="items" [position]="'right'">
             <ng-template pTemplate="item" let-item>
                 <img [src]="item.icon" [alt]="item.label" width="100%" />
             </ng-template>
