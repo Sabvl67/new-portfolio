@@ -1,7 +1,15 @@
-<ul class = "nav-bar flex flex-row justify-content-center">
-    @for (item of navLink; track item) {
-        <li class = "nav-link px-8">
-            <a class="nav-item" (click)="scrollTo(item.toLowerCase())"> {{item}} </a>
-        </li>
-    }
-</ul>
+<nav class="navbar">
+    <!-- <div class="navbar-logo">
+        <img src="logo.png" alt="logo"/>
+    </div> -->
+    <ul class = "navbar-links">
+        <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page"> About</a></li>
+        <li><a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page"> Experience</a></li>
+        <li><a routerLink="/technology" routerLinkActive="active" ariaCurrentWhenActive="page"> Technology</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page"> Projects</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page"> Contact</a></li>
+    </ul>
+    <!-- <div class ="navbar-actions">
+    </div> -->
+    </nav>
+    <router-outlet></router-outlet>
