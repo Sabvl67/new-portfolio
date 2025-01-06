@@ -18,3 +18,8 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/media/Inter-roman.var.woff2?v=3.19') format('woff2');
+}
