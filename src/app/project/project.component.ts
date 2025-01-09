@@ -30,7 +30,7 @@ export class ProjectComponent implements OnInit {
 
     visible: boolean = false;
     selectedProduct!: Product;
-    displayDialog: boolean = false;
+    // displayDialog: boolean = false;
 
     constructor() {}
 
@@ -64,9 +64,7 @@ export class ProjectComponent implements OnInit {
     showDialog(product: Product) {
         this.selectedProduct = product;
         this.visible = true;
+        console.log("selectedProduct", this.selectedProduct);
     }
-    closeDialog(): void {
-        this.displayDialog = false;
-      }
 
 }

@@ -100,4 +100,18 @@
               </div>
           </ng-template>
   </p-carousel>
+  <p-dialog 
+  header="Product Details" 
+  [modal]="true"
+  [(visible)]="visible" 
+  [style]="{ width: '50rem' }" 
+  [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+  [maximizable]="true">
+      <div *ngIf="selectedProduct">
+          <h2>{{ selectedProduct.name }}</h2>
+          <p>
+              {{ selectedProduct.description }}
+          </p>
+      </div>
+  </p-dialog>
 </div>
