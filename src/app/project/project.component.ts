@@ -4,56 +4,69 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { DialogModule } from 'primeng/dialog';
 import { WORK_DETAILS } from '../work-detail';
+
+interface Product {
+    id: string;
+    name: string;
+    description: string;
+    image: string;
+    link: string;
+}
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [RadioButtonModule, CommonModule, CarouselModule, ButtonModule, TagModule],
+  imports: [RadioButtonModule, CommonModule, CarouselModule, ButtonModule, TagModule, DialogModule],
   templateUrl: './project.component.html',
-  styleUrl: './project.component.css',
+  styleUrls: ['./project.component.css'],
 })
-
-
 export class ProjectComponent implements OnInit {
-  products: Product[] | undefined;
 
-  responsiveOptions: any[] | undefined;
+    products: Product[] = [];
 
-  constructor(private workDetails: WORK_DETAILS) {}
+    responsiveOptions: any[] | undefined;
 
-  ngOnInit() {
-      this.productService.getProductsSmall().then((products: Product[] | undefined) => {
-          this.products = products;
-      });
+    visible: boolean = false;
+    selectedProduct!: Product;
+    displayDialog: boolean = false;
 
-      this.responsiveOptions = [
-          {
-              breakpoint: '1199px',
-              numVisible: 1,
-              numScroll: 1
-          },
-          {
-              breakpoint: '991px',
-              numVisible: 2,
-              numScroll: 1
-          },
-          {
-              breakpoint: '767px',
-              numVisible: 1,
-              numScroll: 1
-          }
-      ];
-  }
+    constructor() {}
 
-  getSeverity(status: string) {
-      switch (status) {
-          case 'INSTOCK':
-              return 'success';
-          case 'LOWSTOCK':
-              return 'warning';
-          case 'OUTOFSTOCK':
-              return 'danger';
+    ngOnInit() {
+
+        this.products = WORK_DETAILS;
+
+            this.responsiveOptions = [
+                    {
+                            breakpoint: '1199px',
+                            numVisible: 1,
+                            numScroll: 1
+                    },
+                    {
+                            breakpoint: '991px',
+                            numVisible: 2,
+                            numScroll: 1
+                    },
+                    {
+                            breakpoint: '767px',
+                            numVisible: 1,
+                            numScroll: 1
+                    }
+            ];
+    }
+    
+    openLink(link: string) {
+        window.open(link, '_blank');
+    }
+
+    showDialog(product: Product) {
+        this.selectedProduct = product;
+        this.visible = true;
+    }
+    closeDialog(): void {
+        this.displayDialog = false;
       }
-  }
+
 }

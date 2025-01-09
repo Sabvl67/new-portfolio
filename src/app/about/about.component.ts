@@ -19,26 +19,31 @@ export class AboutComponent implements OnInit{
   
     ngOnInit() {
       this.items = [
-        {
-          label: 'Spotify',
-          icon: 'spotify.svg'
-        },
+
         {
           label: 'Github',
           icon: '/github.svg',
+          link: 'https://github.com/Sabvl67'
         },
         {
           label: 'Linkedin',
           icon: '/linkedin.svg',
+          link: 'https://www.linkedin.com/in/qanh-vo/'
         },
         {
           label: 'Gmail',
           icon: '/gmail.svg',
+          link: 'mailto:volequynhanh67@gmail.com'
         },
         {
           label: 'Discord',
           icon: '/discord.svg',
+          link: 'https://discord.com/users/munjkin'
         },
       ];
+    }
+
+    openLink(link: string) {
+      window.open(link, "_blank");
     }
   }

@@ -32,7 +32,7 @@
         <div class=" dock-window ">
         <p-dock [model]="items" [position]="'right'">
             <ng-template pTemplate="item" let-item>
-                <img [src]="item.icon" [alt]="item.label" width="100%" />
+                <img [src]="item.icon" [alt]="item.label" width="100%" (click)="openLink(item.link)"/>
             </ng-template>
         </p-dock>
     </div>
