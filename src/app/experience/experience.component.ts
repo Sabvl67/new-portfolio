@@ -11,6 +11,7 @@ interface EventItem {
   date?: string;
   description?: string;
   icon?: string;
+  attachment?: string;
   color?: string;
   image?: string;
 }
@@ -41,7 +42,8 @@ experiences: any;
         { 
           status: 'Mitacs Globallink Internship Mentor', 
           date: 'Apr 2024 - Aug 2024', 
-          description: 'Mentored interns in research projects, providing guidance and support to help them achieve their academic and professional goals.', 
+          description: ` Provided comprehensive support to a diverse group of international undergraduate students participating in the Mitacs Globalink program.<br> <br>
+                         Collaborated with Mitacs and university staff to address any issues or concerns raised by GRIs and ensure a positive internship experience.`, 
           icon: 'pi pi-shopping-cart', 
           color: '#4caf50' 
         },
@@ -55,15 +57,16 @@ experiences: any;
         { 
           status: 'Undergraduate Research Assistant', 
           date: 'Oct 2023 - Aug 2024', 
-          description: 'Assisted in research projects, conducting experiments, analyzing data, and contributing to academic publications.', 
+          description: ' Conduct literature reviews on API alternatives, and social media analysis methodologies.<br> <br> Applying advanced data analysis techniques using Python, Pandas and NumPy, to extract meaningful insights and trends related to API alternatives and Social Media Listening.<br> <br>  Explored and experimented with machine learning models, incorporating OpenAI\'s GPT (Generative Pre-trained Transformer) for text generation and analysis.',
           icon: 'pi pi-cog', 
           color: '#673AB7' 
         },
         { 
           status: 'Machine Learning Fellow', 
           date: 'May 2023 - Jun 2023', 
-          description: 'Understood the fundamentals of machine learning to approach problems in new ways, offer answers to important questions, and collaborate to create AI tools that benefit society. Explored the field of artificial intelligence with the assistance of speakers and lecturers, and narrowed my interests with guidance from knowledgeable mentors and teaching assistants.', 
-          icon: 'pi pi-shopping-cart', 
+          description: 'Understood the fundamentals of machine learning to approach problems in new ways, offer answers to important questions, and collaborate to create AI tools that benefit society.<br> <br> Explored the field of artificial intelligence with the assistance of speakers and lecturers, and narrowed my interests with guidance from knowledgeable mentors and teaching assistants.', 
+          icon: 'pi pi-shopping-cart',
+          attachment:'https://www.ai4goodlab.com/news/project-reports/2024/02/15/plate-pal-2023-edmonton-accelerator-award-winner/',
           color: '#9C27B0' 
         }
       ];

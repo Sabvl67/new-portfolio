@@ -5,7 +5,10 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { DialogModule } from 'primeng/dialog';
+
+
 import { WORK_DETAILS } from '../work-detail';
+import { from } from 'rxjs';
 
 interface Product {
     id: string;
@@ -61,10 +64,14 @@ export class ProjectComponent implements OnInit {
         window.open(link, '_blank');
     }
 
-    showDialog(product: Product) {
-        this.selectedProduct = product;
+    // showDialog1(product: Product) {
+    //     this.selectedProduct = product;
+    //     this.visible = true;
+    //     console.log("selectedProduct", this.selectedProduct);
+    // }
+
+    showDialog() {
         this.visible = true;
-        console.log("selectedProduct", this.selectedProduct);
     }
 
 }

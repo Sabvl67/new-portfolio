@@ -1,0 +1,14 @@
+.custom-button {
+    background: linear-gradient(90deg, #2954a3, #c961de); /* Reverse gradient on hover */
+    color: white;
+    border: none;          
+    padding: 0.5rem 2.0rem; 
+    border-radius: 50px;    
+    cursor: pointer;         
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05); /* Slightly enlarge button on hover */
+    }
+  }
+  
