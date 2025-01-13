@@ -64,8 +64,13 @@ export class ProjectComponent implements OnInit {
         window.open(link, '_blank');
     }
 
-    showDialog(product: Product) {
-        this.selectedProduct = product;
+    // showDialog1(product: Product) {
+    //     this.selectedProduct = product;
+    //     this.visible = true;
+    //     console.log("selectedProduct", this.selectedProduct);
+    // }
+
+    showDialog() {
         this.visible = true;
     }
     closeDialog(): void {

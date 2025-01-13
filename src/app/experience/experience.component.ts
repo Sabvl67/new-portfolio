@@ -12,6 +12,7 @@ interface EventItem {
   description?: string;
   icon?: string;
   attachment?: string;
+  attachment?: string;
   color?: string;
   image?: string;
 }
