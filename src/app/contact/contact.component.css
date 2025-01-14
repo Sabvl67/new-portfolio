@@ -11,4 +11,9 @@
       transform: scale(1.05); /* Slightly enlarge button on hover */
     }
   }
-  
+  .card {
+    background: rgba(75, 0, 130, 0.4); /* Purple with 80% opacity */
+    padding: 6%;
+    color: white;
+    text-align: center;
+  }

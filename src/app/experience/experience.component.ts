@@ -12,7 +12,7 @@ interface EventItem {
   description?: string;
   icon?: string;
   attachment?: string;
-  attachment?: string;
+  more?: string;
   color?: string;
   image?: string;
 }
@@ -26,10 +26,7 @@ interface EventItem {
 export class ExperienceComponent {
 index: any;
 experiences: any;
-  detailOnClick(experience:any) {
-    experience.detailIsDisplayed=!experience.detailIsDisplayed;
-  }
-  events: EventItem[];
+events: EventItem[];
 
   constructor() {
     this.events = [
@@ -38,7 +35,8 @@ experiences: any;
         date: 'Sep 2024 - Apr 2025', 
         description: 'Worked on developing and maintaining web applications, collaborating with cross-functional teams to deliver high-quality software solutions.', 
         icon: 'pi pi-desktop', 
-        color: '#607D8B' 
+        color: '#607D8B',
+        more: ''
       },
       { 
         status: 'Mitacs Globallink Internship Mentor', 
@@ -52,6 +50,7 @@ experiences: any;
         status: 'Fintech Cadence Trainee', 
         date: 'Mar 2024 - May 2024', 
         description: 'Participated in a training program focused on financial technology, gaining insights into the latest trends and technologies in the fintech industry.', 
+        attachment: 'https://www.linkedin.com/in/qanh-vo/overlay/1715816290079/single-media-viewer/?profileId=ACoAADH59J0BXd9XAr0sehlF-SD7IztDgn_GQoA',
         icon: 'pi pi-dollar', 
         color: '#FF9800' 
       },
@@ -60,7 +59,8 @@ experiences: any;
         date: 'Oct 2023 - Aug 2024', 
         description: ' Conduct literature reviews on API alternatives, and social media analysis methodologies.<br> <br> Applying advanced data analysis techniques using Python, Pandas and NumPy, to extract meaningful insights and trends related to API alternatives and Social Media Listening.<br> <br>  Explored and experimented with machine learning models, incorporating OpenAI\'s GPT (Generative Pre-trained Transformer) for text generation and analysis.',
         icon: 'pi pi-graduation-cap', 
-        color: '#673AB7' 
+        color: '#673AB7' ,
+        more: ''
       },
       { 
         status: 'Machine Learning Fellow', 
