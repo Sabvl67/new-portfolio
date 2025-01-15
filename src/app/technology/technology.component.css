@@ -4,12 +4,45 @@
 	box-sizing: border-box;
 }
 
+#technology {
+    height: 300px;
+    padding: 20px;
+}
+
 body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 80vh;
+	height: 200px;
 	background: #25335b;
+}
+
+mini-nav {
+    margin-bottom: 20px;
+	overflow-y: auto;
+}
+
+.mini-nav .active {
+    color: #113adf;
+    font-weight: bold;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 15px;
+	word-break: break-word;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect for navbar links */
+.nav-item:hover {
+    color: #113adf;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 @keyframes animate {

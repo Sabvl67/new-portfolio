@@ -1,9 +1,48 @@
-<div class="flex" id="technology">
+<div id="technology">
     <div class="col-2">
         <h1>Technology</h1>
+        <nav>
+            <ul class="mini-nav flex flex-row justify-content-center" style="list-style-type: none;">
+                <li class="nav-item p-1 rounded">
+                    <a href="#" (click)="$event.preventDefault(); setActiveSection('technology')"
+                        [class.active]="activeSection === 'technology'">Technology</a>
+                </li>
+                <li class="nav-item p-1 rounded">
+                    <a href="#" (click)="$event.preventDefault(); setActiveSection('achievements')"
+                        [class.active]="activeSection === 'achievements'">Achievements</a>
+                </li>
+                <li class="nav-item p-1 rounded">
+                    <a href="#" (click)="$event.preventDefault(); setActiveSection('certifications')"
+                        [class.active]="activeSection === 'certifications'">Certifications</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content" class="content-section">
+            <!-- Multi-column layout -->
+            <div class="row" *ngIf="firstColumn.length > 0 && secondColumn.length > 0; else singleColumn">
+                <div class="col-6">
+                    <ul>
+                        <li *ngFor="let item of firstColumn">{{ item }}</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li *ngFor="let item of secondColumn">{{ item }}</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- Single-column layout -->
+            <ng-template #singleColumn>
+                <ul>
+                    <li *ngFor="let item of firstColumn">{{ item }}</li>
+                </ul>
+            </ng-template>
+        </div>
+        
     </div>
-    
-    <div class="container ">
+
+    <div class="container">
         <div class="cube">
             <div style="--x:-1; --y:0;">
                 <span style="--i:3;"></span>
