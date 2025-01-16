@@ -11,8 +11,14 @@
       transform: scale(1.05); /* Slightly enlarge button on hover */
     }
   }
-  .card {
-    background: rgba(75, 0, 130, 0.4); /* Purple with 80% opacity */
-    color: white;
-    text-align: center;
-  }
+
+/* .contact-card {
+  background: rgba(75, 0, 130, 0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+ */
+ /* background: rgba(75, 0, 130, 0.4); width: 100%; */

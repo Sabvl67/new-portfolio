@@ -18,8 +18,21 @@
                     <p *ngIf="event.attachment">
                         <a [href]="event.attachment" target="_blank">View</a>
                 </p>
-                <p-button label="Read more" [text]="true" />
+                <p-button label="Read more" [text]="true" (click)="showModal(event)" />
             </p-card>
         </ng-template>
     </p-timeline>
+
+    <!-- Custom Modal -->
+    <div *ngIf="visible" class="custom-modal-overlay" (click)="closeModal()">
+        <div class="custom-modal" (click)="$event.stopPropagation()">
+            <div class="custom-modal-header">
+                <h2>{{ selectedEvent?.status }}</h2>
+                <button class="close-button" (click)="closeModal()">&times;</button>
+            </div>
+            <div class="custom-modal-content" 
+            [innerHTML]="selectedEvent?.more">
+            </div>
+        </div>
+    </div>
 </div>

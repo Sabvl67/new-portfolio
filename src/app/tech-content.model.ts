@@ -7,7 +7,6 @@ export interface TechContent {
 export const contentData: TechContent = {
   technology: [
     'Angular',
-    'TypeScript',
     'HTML5',
     'CSS3',
     'ASP.NET Core',

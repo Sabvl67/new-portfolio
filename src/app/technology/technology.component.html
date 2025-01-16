@@ -19,80 +19,100 @@
         </nav>
         <div id="content" class="content-section">
             <!-- Multi-column layout -->
-            <div class="row" *ngIf="firstColumn.length > 0 && secondColumn.length > 0; else singleColumn">
-                <div class="col-6">
-                    <ul>
-                        <li *ngFor="let item of firstColumn">{{ item }}</li>
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <ul>
-                        <li *ngFor="let item of secondColumn">{{ item }}</li>
-                    </ul>
+            <div *ngIf="activeSection === 'technology'">
+                <div class="row flex flex-row flex-wrap pt-3">
+                    <div class="col-6 gap-3 mb-3">
+                        <ul>
+                            <p-button label="HTML" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="CSS" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="Angular" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="C++" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="Python" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label=".NET" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="SQL" [rounded]="true" severity="secondary" class="mb-2" />
+                        </ul>
+                    </div>
+                    <div class="col-6 gap-3 mb-3">
+                        <ul>
+                            <p-button label="Azure DevOps" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="Git" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="Postman" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="Swagger" [rounded]="true" severity="secondary" class="mb-2" />
+                            <p-button label="TensorFlow" [rounded]="true" severity="secondary" class="mb-2" />
+                        </ul>
+                    </div>
                 </div>
             </div>
-        
-            <!-- Single-column layout -->
-            <ng-template #singleColumn>
-                <ul>
-                    <li *ngFor="let item of firstColumn">{{ item }}</li>
-                </ul>
-            </ng-template>
-        </div>
-        
-    </div>
 
-    <div class="container">
-        <div class="cube">
-            <div style="--x:-1; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
+            <!-- Achievements Section -->
+            <div *ngIf="activeSection === 'achievements'">
+                <div class="col-12">
+                    <div *ngFor="let achievement of achievements">
+                        <p-button class="btn btn-primary my-2" [label]="achievement" />
+                    </div>
+                </div>
             </div>
-            <div style="--x:0; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
-            </div>
-            <div style="--x:1; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
-            </div>
-        </div>
-        <div class="cube">
-            <div style="--x:-1; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
-            </div>
-            <div style="--x:0; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
-            </div>
-            <div style="--x:1; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
+
+            <div *ngIf="activeSection === 'certifications'">
+                <div class="col-12">
+                    <div *ngFor="let certification of certifications">
+                        <p-button class="btn btn-primary my-2" [label]="certification" />
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="cube">
-            <div style="--x:-1; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
+
+        <!-- <div class="container">
+            <div class="cube">
+                <div style="--x:-1; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
+                <div style="--x:0; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
+                <div style="--x:1; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
             </div>
-            <div style="--x:0; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
+            <div class="cube">
+                <div style="--x:-1; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
+                <div style="--x:0; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
+                <div style="--x:1; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
             </div>
-            <div style="--x:1; --y:0;">
-                <span style="--i:3;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:1;"></span>
-            </div>
-        </div>
+            <div class="cube">
+                <div style="--x:-1; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
+                <div style="--x:0; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
+                <div style="--x:1; --y:0;">
+                    <span style="--i:3;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:1;"></span>
+                </div>
+            </div> -->
     </div>
 </div>
