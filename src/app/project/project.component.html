@@ -1,5 +1,4 @@
-  <div class="cards-container" id="projects">
-    <!-- Card 1 -->
+<!-- <div class="cards-container" id="projects">
     <div class="card">
       <img
         src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
@@ -15,7 +14,6 @@
       </div>
     </div>
 
-    <!-- Card 2 -->
     <div class="card">
       <img
         src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
@@ -31,8 +29,7 @@
       </div>
     </div>
 
-    <!-- Card 3 -->
-    <!-- <div class="card">
+    <div class="card">
       <img
         src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
         alt="portfolio" />
@@ -44,9 +41,8 @@
           <p-button label="Link" styleClass="p-button-link"></p-button>
         </a>
       </div>
-    </div> -->
+    </div>
 
-    <!-- Card 4 -->
     <div class="card">
       <img
         src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
@@ -61,7 +57,6 @@
       </div>
     </div>
 
-    <!-- Card 5 -->
     <div class="card">
       <img
         src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
@@ -76,7 +71,6 @@
       </div>
     </div>
 
-    <!-- Card 6 -->
     <div class="card">
       <img
         src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
@@ -90,4 +84,27 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
+<div class="border-500" id="projects">
+  <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <div class="border-1 surface-border border-round m-2 p-3">
+        <div class="mb-3">
+          <div class="relative mx-auto">
+            <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name"
+              class="w-full border-round" />
+            <p-tag [value]="product.status" [severity]="getSeverity(product.status)" class="absolute"
+              [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
+          </div>
+        </div>
+        <div class="mb-3 font-medium">{{ product.name }}</div>
+        <div class="flex justify-content-between align-items-center">
+          <span>
+            <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+            <p-button icon="pi pi-github" styleClass="ml-2" (click)="openLink(product.link)" />
+          </span>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

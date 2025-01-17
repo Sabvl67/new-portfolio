@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
@@ -27,6 +27,7 @@ interface EventItem {
   ],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class ExperienceComponent {
   index: any;

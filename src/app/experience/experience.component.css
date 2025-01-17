@@ -1,5 +1,7 @@
 
-  /* Modal Overlay */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+ 
+ /* Modal Overlay */
 .custom-modal-overlay {
     position: fixed;
     top: 0;
@@ -13,16 +15,7 @@
     z-index: 1000;
   }
   
-  /* Modal Container */
-  .custom-modal {
-    background: #f5f2f2;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    width: 90%;
-    animation: fadeIn 0.3s ease;
-  }
-  
+
   /* Modal Header */
   .custom-modal-header {
     display: flex;
@@ -70,4 +63,51 @@
       transform: scale(1);
     }
   }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+  :root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
+  }
+  
+    /* Modal Container */
+    .custom-modal {
+      background: #f5f2f2;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      width: 90%;
+      border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+      /* animation: fadeIn 0.3s ease; */
+      animation: borderRotate var(--d) linear infinite forwards;
+      border: 0.35rem solid;
+    }
+
+  @keyframes borderRotate {
+    100% {
+      --angle: 420deg;
+    }
+  }
+  
   
