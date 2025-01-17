@@ -10,7 +10,29 @@
     &:hover {
       transform: scale(1.05); /* Slightly enlarge button on hover */
     }
-    
-
   }
+
+  .relative {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%; /* Adjust image size */
+    height: auto;
+}
+
+.text-container {
+    position: absolute; /* Fix position relative to the parent container */
+    top: 40%; /* Adjust vertical alignment */
+    left: 54%; /* Adjust horizontal alignment */
+    transform: translate(-50%, -50%); /* Center text on image */
+    text-align: left;
+    width: 90%; /* Adjust the width of the text box */
+    max-width: 280px; /* Ensure it doesn't exceed a fixed width */
+    padding: 0.5rem;
+    color: white; /* Ensure text is visible */
+}
   

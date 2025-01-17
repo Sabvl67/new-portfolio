@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { DialogModule } from 'primeng/dialog';
+import { TooltipModule } from 'primeng/tooltip';
 import { ProductService } from '../product.service';
 
 
@@ -24,7 +25,7 @@ interface Product {
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [RadioButtonModule, CommonModule, CarouselModule, ButtonModule, TagModule, DialogModule],
+  imports: [RadioButtonModule, TooltipModule, CommonModule, CarouselModule, ButtonModule, TagModule, DialogModule],
   providers: [ProductService],
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css'],
