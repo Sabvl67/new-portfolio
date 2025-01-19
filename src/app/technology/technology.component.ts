@@ -13,37 +13,18 @@ export class TechnologyComponent {
   activeSection: keyof TechContent = 'technology';
   techContent = 'technology';
   achievements= [
-    'Won Hackathon 2023',
-    'Developed Open Source Tools',
-    'Published Research Papers',
+    'Codédex Summer Hackathon 2024 Winner',
+    'Alberta Health Hacks 2024 Winner',
+    'AI4Good Lab Accelerator 2023 Winner',
   ];
   certifications= [
     'Microsoft Certified: Azure Fundamentals',
-    'Google Cloud Professional Data Engineer',
-    'Certified Scrum Master',
+    'Fintech Certificate - Fintech Cadence',
+    'Amii Kickstart 2023',
   ];
-
-
-
-  // get content(): string[] {
-  //   const items = this.techContent[this.activeSection];
-  //   this.splitContent(items);
-  //   return items;
-  // }
 
   setActiveSection(section: keyof TechContent): void {
     this.activeSection = section;
   }
-  
-  // private splitContent(items: string[]): void {
-  //   if (items.length > 8) {
-  //     const midIndex = Math.ceil(items.length / 2);
-  //     this.firstColumn = items.slice(0, midIndex);
-  //     this.secondColumn = items.slice(midIndex);
-  //   } else {
-  //     this.firstColumn = items;
-  //     this.secondColumn = []; // Leave the second column empty if there are 8 or fewer items
-  //   }
-  // }
 
 }

@@ -12,13 +12,64 @@
     }
   }
 
-/* .contact-card {
-  background: rgba(75, 0, 130, 0.4);
+/* Card styling */
+.contact-card {
+  background: rgba(47, 47, 138, 20%);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
   padding: 2rem;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 800px; 
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  color: white;
 }
- */
- /* background: rgba(75, 0, 130, 0.4); width: 100%; */
+
+/* Input fields */
+.input-field {
+  background: rgba(255, 255, 255, 0.2); /* Transparent input background */
+  border: none; 
+  border-radius: 10px; 
+  padding: 10px 15px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  transition: background 0.3s, border 0.3s;
+}
+
+/* Focus state */
+.input-field:focus {
+  background: rgba(255, 255, 255, 0.3); /* Slightly brighter background */
+  border: 1px solid #4c6ef5; /* Highlight border */
+  outline: none;
+}
+
+/* Label styling */
+label {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Centering content */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer styling */
+.send {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}

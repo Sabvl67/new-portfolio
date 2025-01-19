@@ -1,29 +1,24 @@
-<div class="background" id="contact" >
-  <div class="card">
-    <div class="flex col-12 justify-content-center">
-      <p class="text-4xl font-bold text-white">Send me a message</p>
-    </div>
-    <div class="flex justify-content-center" id="contact">
+<div class="contact-section" id="contact">
+  <div class="contact-card">
+      <p class=" header text-4xl font-bold text-white">Send me a message</p>
+   <div class="form-container">
       <div class="formgrid grid">
         <div class="field col-12 md:col-6">
           <label for="name">Name</label>
-          <input id="name" type="text"
-            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+          <input id="name" type="text" class="input-field" />
         </div>
         <div class="field col-12 md:col-6">
           <label for="email">Email</label>
-          <input id="email" type="text"
-            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+          <input id="email" type="text" class="input-field" />
         </div>
         <div class="field col-12">
           <label for="message">Message</label>
-          <textarea id="message" type="text" rows="4"
-            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+          <textarea id="message" rows="4" class="input-field"></textarea>
         </div>
       </div>
     </div>
-    <div class="flex col-12 justify-content-center">
-      <p-button icon="pi pi-send" label="Send" styleClass="ml-2"></p-button>
+    <div class="send">
+      <button class="custom-button">Send</button>
     </div>
   </div>
 </div>
