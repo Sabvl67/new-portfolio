@@ -1,24 +1,33 @@
 <div class="contact-section" id="contact">
-  <div class="contact-card">
-      <p class=" header text-4xl font-bold text-white">Send me a message</p>
-   <div class="form-container">
-      <div class="formgrid grid">
-        <div class="field col-12 md:col-6">
+  <div class="contact-card grid nested-grid">
+      <p class=" header text-4xl font-bold text-white">Get in touch</p>
+   <div class="col-8">
+      <div class="grid">
+        <div class="col-6">
           <label for="name">Name</label>
           <input id="name" type="text" class="input-field" />
         </div>
-        <div class="field col-12 md:col-6">
+        <div class="col-6">
           <label for="email">Email</label>
           <input id="email" type="text" class="input-field" />
         </div>
-        <div class="field col-12">
+        <div class="col-12">
           <label for="message">Message</label>
           <textarea id="message" rows="4" class="input-field"></textarea>
         </div>
       </div>
     </div>
-    <div class="send">
-      <button class="custom-button">Send</button>
+    <div class="col-4">
+      <h3> Get in touch</h3>
+      <h5> Email: anh.vo&#64;uleth.ca</h5>
+      <div class="">
+        <p-button icon="pi pi-github" [rounded]="true" [text]="true" severity="secondary"/>
+        <p-button icon="pi pi-linkedin" [rounded]="true" [text]="true" severity="secondary"/>
+        <p-button icon="pi pi-envelope" [rounded]="true" [text]="true" severity="secondary"/>
+      </div>
+    </div>
+    <div class="send col-4">
+      <button class="custom-button">Send Message</button>
     </div>
   </div>
 </div>
