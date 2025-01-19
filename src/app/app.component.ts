@@ -8,11 +8,12 @@ import { ProjectComponent } from "./project/project.component";
 import { TechnologyComponent } from "./technology/technology.component";
 import { ExperienceComponent } from "./experience/experience.component";
 import { CubeComponent } from "./cube/cube.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ButtonModule, AboutComponent, NavBarComponent, ContactComponent, ProjectComponent, TechnologyComponent, ExperienceComponent, CubeComponent],
+  imports: [CommonModule, ButtonModule, AboutComponent, NavBarComponent, ContactComponent, ProjectComponent, TechnologyComponent, ExperienceComponent, CubeComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

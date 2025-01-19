@@ -1,90 +1,3 @@
-<!-- <div class="cards-container" id="projects">
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&fit=crop&w=667&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
-        alt="family" />
-      <div class="info">
-        <h1>Family Bloom</h1>
-        <p>Custom dashboards for each family member featuring tailored content,
-          progress updates, and reminders related to their role in the FFT process.
-        </p>
-        <a href="https://github.com/Sabvl67/FamilyBloom">
-          <p-button label="Link" styleClass="p-button-link"></p-button>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&fit=crop&w=750&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
-        alt="platepal" />
-      <div class="info">
-        <h1>Platepal</h1>
-        <p>PlatePal is a pioneering initiative designed to assist low-income individuals,
-          including students and workers, in acquiring groceries more efficiently.
-        </p>
-        <a href="https://github.com/Sabvl67/PlatePal">
-          <p-button label="Link" styleClass="p-button-link"></p-button>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
-        alt="portfolio" />
-      <div class="info">
-        <h1>Portfolio</h1>
-        <p>A portfolio project built with Angular, TypeScript, and PrimeNG components,
-          showcasing my learning experience and development skills.</p>
-        <a href="https://github.com/Sabvl67/new-portfolio">
-          <p-button label="Link" styleClass="p-button-link"></p-button>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
-        alt="ratspike" />
-      <div class="info">
-        <h1>Rat Spike Count Generator</h1>
-        <p>Generative Adversarial Network (GAN) for generating synthetic spike count patterns
-          using TensorFlow and Keras.</p>
-        <a href="https://github.com/Sabvl67/Rat-Spike-Count-Generator">
-          <p-button label="Link" styleClass="p-button-link"></p-button>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
-        alt="olympic predictor" />
-      <div class="info">
-        <h1>Olympic Predictor</h1>
-        <p>Predict the winner of the 2024 Olympic Games by analyzing medal counts
-          from the Tokyo 2021 Olympics.</p>
-        <a href="https://github.com/Sabvl67/Olympic-Predictor">
-          <p-button label="Link" styleClass="p-button-link"></p-button>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?auto=format&fit=crop&w=311&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
-        alt="text based game" />
-      <div class="info">
-        <h1>Text based Game</h1>
-        <p>Your ultimate goal is to rescue the wise man, imprisoned in a mysterious cage,
-          who holds the key to saving the country.</p>
-        <a href="https://github.com/Sabvl67/Text-based-game">
-          <p-button label="Link" styleClass="p-button-link"></p-button>
-        </a>
-      </div>
-    </div>
-  </div> -->
 <div id="projects" class="projects-container">
   <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
     <ng-template let-product pTemplate="item">
@@ -100,8 +13,8 @@
         <div class="mb-3 font-medium">{{ product.name }}</div>
         <div class="flex justify-content-between align-items-center">
           <span>
-            <p-button [pTooltip]="tooltipContent" label="About" severity="secondary" tooltipPosition="bottom" [outlined]="true" />
-            <p-button icon="pi pi-github" styleClass="ml-2" (click)="openLink(product.link)" />
+            <p-button [pTooltip]="tooltipContent" label="About" tooltipPosition="bottom" [outlined]="true" />
+            <p-button icon="pi pi-github" [rounded]="true" severity="secondary" [outlined]="true" styleClass="ml-2" (click)="openLink(product.link)" />
             <ng-template #tooltipContent>
               <div class="flex align-items-center">
                   <span> {{product.description}} </span>

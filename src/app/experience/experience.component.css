@@ -15,7 +15,6 @@
     z-index: 1000;
   }
   
-
   /* Modal Header */
   .custom-modal-header {
     display: flex;
@@ -24,7 +23,6 @@
     font-size: 15px;
     color: black;
     font-weight: bold;
-    margin-left: 14px;
     margin-top: 5px;
   }
   
@@ -108,11 +106,6 @@
 		z-index: 2;
     backdrop-filter: blur(20px);
   }
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 1.7rem;
-      padding-bottom: 1rem;
     }
     p {
       font-size: 1rem;
