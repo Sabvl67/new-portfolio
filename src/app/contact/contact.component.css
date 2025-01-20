@@ -26,7 +26,7 @@
 
 /* Input fields */
 .input-field {
-  background: rgba(255, 255, 255, 0.2); /* Transparent input background */
+  background: rgba(255, 255, 255, 0.2); 
   border: none; 
   border-radius: 10px; 
   padding: 10px 15px;
@@ -40,8 +40,8 @@
 
 /* Focus state */
 .input-field:focus {
-  background: rgba(255, 255, 255, 0.3); /* Slightly brighter background */
-  border: 1px solid #4c6ef5; /* Highlight border */
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #4c6ef5; 
   outline: none;
 }
 
@@ -67,7 +67,7 @@ label {
   margin-bottom: 1.5rem;
 }
 
-/* Footer styling */
+/* Sen button styling */
 .send {
   display: flex;
   justify-content: center;
